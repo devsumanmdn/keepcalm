@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Allura|Antic+Slab|Bad+Script|Boogaloo|Cabin+Sketch|Calligraffitti|Carter+One|Chewy|Clicker+Script|Comfortaa|Cookie|Courgette|Delius+Unicase|Didact+Gothic|Fascinate+Inline|Faster+One|Fredericka+the+Great|Fredoka+One|Grand+Hotel|Great+Vibes|Italianno|Josefin+Slab|Julius+Sans+One|Just+Another+Hand|Kaushan+Script|Lemonada|Marcellus+SC|Monoton|Niconne|Parisienne|Patrick+Hand|Philosopher|Pinyon+Script|Playball|Poiret+One|Righteous|Rochester|Rock+Salt|Sacramento|Satisfy|Shadows+Into+Light+Two|Shrikhand|Sigmar+One|Syncopate|Tangerine|Yellowtail|Yesteryear');
+
+
+*{
+	color: #fafafa;
+}
+
+html{
+	margin: 0;
+	display: block;
+}
+body{
+	margin: 0;
+	background-color: #202020;
+}
+header > * a{
+	font-weight: 600;
+	text-align: center;
+	text-decoration: none;
+	color: #808080;
+	float: left;
+	font-family: 'Philosopher', sans-serif;
+	position: relative;
+  transition-duration: 0.3s;
+  z-index: 1000;
+}
+header{
+	top: 0px;
+	position: fixed;
+	background-color: #303030;
+	display: block;
+	width: 100vw;
+	height: 90px;
+	box-shadow: 2px 2px 10px 0px #101010;
+  z-index: 1000;
+}
+.div-logo{
+	float: left;
+	padding: 30px 30px;
+	display: block;
+	width: 80px;
+	font-size: 30px;
+	height: 50%;
+}
+.menus{
+	top: 25px;
+	right: 25px;
+	float: right;
+	position: relative;
+	display: block;
+}
+.menus>div{
+	position: static;
+	float: left;
+}
+.menus>div>a{
+	padding: 10px;
+	margin-left: 10px;
+	border-radius: 3px;
+	border: 1px #606060 solid;
+}
+.menus>div>a:hover{
+	color: white;
+	border-color: white;
+    background-color: #202020;
+}
+.main{
+    position: fixed;
+    top: 90px;
+    overflow-y: auto;
+}
+
+#slider{
+    width: 100vw;
+    height: 60vw;
+}
+#slider>*{
+    display: none;
+    height: inherit;
+    width: inherit;
+    background-size: cover;
+    position: absolute;
+    transition-delay: 0.6s;
+}
+#slider>div[active='true'] {
+    animation: myAnimation 1s ease-in-out;
+    display: block;
+}
+@keyframes myAnimation {
+    from {left: -100vw}
+    to {left : 0px;}
+}
+#slider>div[active='changing'] {
+    animation: myAnimation1 1s ease-in-out;
+		display: block;
+}
+@keyframes myAnimation1 {
+    from {
+			left: 0vw;
+			display: block;
+		}
+    to {left : 100vw;}
+}
+#img1{
+    background-image: url(hd-pics-photos-beautiful-butterfly-flower-macro-nature-hd-quality-desktop-background-wallpaper.jpg);
+}
+#img2{
+    background-image: url(wild-wallpaper-for-laptop-in-full-hd-min.jpg);
+}
+#img3{
+    background-image: url(tumblr-static-blue-wood-background-tumblrarmy-of-me-qnhbuowe-907327959.jpg);
+}
+
+.form{
+	padding: 10px;
+	margin-top: 30px;
+	text-align: center;
+}
+.form > form{
+	text-align: center;
+	display: block;
+}
+form > input{
+	text-align: center;
+	outline: none;
+	padding: 10px;
+	margin-bottom: 20px;
+	color: #202020;
+	font-size: 20px;
+	width: 250px;
+	font-family: 'Josefin Slab', serif;
+	letter-spacing: 1px;
+	border-radius: 6px;
+	border: none;
+}
+input[type='submit']{
+	background-color: green;
+	color: white;
+	width: 270px;
+	box-shadow: none;
+}
+
+
+
+
+
+/*  For Responsive   */
+
+@media screen and (max-width: 678px){
+	header>*>a{
+		margin-left: -30px;
+	}
+	.div-logo{
+		margin-left: 80px;
+	}
+	.div-logo{
+		float: none;
+	}
+	#pills{
+		display: block;
+		width: 37px;
+		height: 37px;
+		position: absolute;
+		left: 16.5px;
+		top: 30px;
+		border-radius: 6px;
+		background-color: transparent;
+    transition-duration: 0.3s;
+    z-index: 1000;
+	}
+  #pills:hover{
+    box-shadow: 2px 2px 4px #131313;
+    background-color: #404040;
+  }
+  #pills:active{
+    box-shadow: 2px 2px 4px rgba(19, 19, 19, 0);
+    background-color: rgba(64, 64, 64, 0);
+  }
+	#pills>div{
+		width: 27px;
+		margin: 6px 5px 5px 5px;
+		height: 4px;
+		background-color: #909090;
+		border-radius: 2px;
+	}
+	.menus{
+		float: left;
+		right: 0px;
+		top: -12px;
+	}
+	.menus>div{
+		left: -244px;
+		position: absolute;
+		float: none;
+	}
+	.menus>div>a{
+		right: 0;
+		display: block;
+		background-color: #303030;
+		margin: 0;
+		margin-bottom: 2px;
+		border: none;
+		border-radius: 0;
+		width: 200px;
+		padding : 20px;
+		box-shadow: 2px 3px 5px #101010;
+	}
+  .main{
+    width: 100vw;
+    height: calc(100vh - 90px);
+    display: block;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+  }
+	#m1{
+	}
+	#m2{
+		top: 61px;
+	}
+	#m3{
+		top: 122px;
+	}
+	#m4{
+		top: 183px;
+	}
+	#m5{
+		top: 244px;
+	}
+}
